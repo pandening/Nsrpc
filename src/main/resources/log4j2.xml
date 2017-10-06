@@ -14,8 +14,8 @@
             </Filters>
         </Console>
         <RollingFile name="FileInfo"
-                     fileName="~/github/ok-rpc/log/ok-rpc.log"
-                     filePattern="~/github/ok-rpc//ok-rpc.log.%d{yyyy-MM-dd}.gz">
+                     fileName="log/log/ok-rpc.log"
+                     filePattern="log/ok-rpc.log.%d{yyyy-MM-dd}.gz">
             <PatternLayout pattern="%d [%t] %-5p [%c{2}] %m%n" />
             <TimeBasedTriggeringPolicy />
             <Filters>
@@ -23,8 +23,8 @@
             </Filters>
         </RollingFile>
         <RollingFile name="AccessInfo"
-                     fileName="~/github/ok-rpc//ok-rpc.access.log"
-                     filePattern="~/github/ok-rpc//ok-rpc.access.log.%d{yyyy-MM-dd}.gz">
+                     fileName="log/ok-rpc.access.log"
+                     filePattern="log/ok-rpc.access.log.%d{yyyy-MM-dd}.gz">
             <PatternLayout
                     pattern="%d [%t] %-5p [%c{2}] %m%n" />
             <TimeBasedTriggeringPolicy />

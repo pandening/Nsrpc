@@ -1,9 +1,14 @@
 package io.hujian.rpc.test.application;
 
+import io.hujian.npc.manager.AsyncRPCCallback;
+import io.hujian.npc.manager.IAsyncObjectProxy;
+import io.hujian.npc.manager.RPCFuture;
 import io.hujian.npc.manager.RpcClient;
 import io.hujian.rpc.test.client.HelloService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by HuJian on 2017/10/6.
@@ -31,10 +36,33 @@ public class ReferenceBeanTest {
 
        // System.out.println(helloService.hello("joke!"));
 
-        HelloService helloService = (HelloService) context.getBean("helloService1");
+        HelloService helloService = (HelloService) context.getBean("syncHelloService");
 
-        System.out.println("0000:" + helloService.hello("000999000"));
+        System.out.println("Sync Call Result:" + helloService.hello("hello ok-rpc"));
 
+        IAsyncObjectProxy proxy = (IAsyncObjectProxy) context.getBean("futureHelloService");
+
+        RPCFuture future = proxy.call("hello", "hello ok-rpc");
+
+        try {
+            System.out.println("Future Call Type:" + future.get());
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        proxy = (IAsyncObjectProxy) context.getBean("callbackHelloService");
+
+        proxy.call("hello", "hello ok-rpc").addCallback(new AsyncRPCCallback() {
+            @Override
+            public void success(Object result) {
+                System.out.println("Callback Call Result:" + result);
+            }
+
+            @Override
+            public void fail(Exception e) {
+                System.out.println("Callback Call Result:" + e);
+            }
+        });
     }
 
 }
