@@ -200,6 +200,10 @@ public class EchoServiceImpl implements EchoService{
    4、更多的编解码器设计
    5、代码格式调整、组织结构调整
    6、bug检测、修复
+   7、服务详情统计上报
+   8、服务降级
+   9、配置内容迁移到配置文件中加载，而不是写死在代码中（也别使用Constant类了吧！）
+   10、负载均衡合理、合法化（BugFix）
 
 
 ```
