@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="nodeList" class="io.hujian.npc.pubisher.RpcNodeGroup">
+        <property name="nodeGroupName" value="test-node-list-group"/>
+        <property name="nodeList" value="127.0.0.1:18999:1"/>
+    </bean>
+
+    <bean id="helloService" class="io.hujian.npc.pubisher.RpcServicePublishBean">
+        <property name="version" value="1.0.0"/>
+        <property name="interfaceName" value="HelloService"/>
+        <property name="url" value="io.hujian.rpc.test.client.HelloService"/>
+        <property name="nodeGroup" ref="nodeList"/>
+    </bean>
+
+    <!-- just for testing  -->
+    <bean id="echoService" class="io.hujian.npc.pubisher.RpcServicePublishBean">
+        <property name="nodeGroup" ref="nodeList"/>
+        <property name="interfaceName" value="EchoService"/>
+        <property name="url" value="io.hujian.rpc.test.client.EchoService"/>
+        <property name="version" value="1.0.0"/>
+    </bean>
+
+    <!-- bean id="service_a" class="io.hujian.npc.pubisher.RpcServicePublishBean">
+        <property name="interfaceName" value="EchoService"/>
+        <property name="nodeGroup" ref="nodeList"/>
+        <property name="url" value="rpc://io.hujian.rpc.test.client.HelloService"/>
+        <property name="retries" value="1"/>
+        <property name="version" value="1.0.0"/>
+    </bean>
+
+    <bean id="service_b" class="io.hujian.npc.pubisher.RpcServicePublishBean">
+        <property name="interfaceName" value="ByByService"/>
+        <property name="nodeGroup" ref="nodeList"/>
+        <property name="url" value="rpc://io.hujian.rpc.test.client.HelloService"/>
+        <property name="retries" value="1"/>
+        <property name="version" value="1.0.0"/>
+    </bean>
+
+    <bean id="service_c" class="io.hujian.npc.pubisher.RpcServicePublishBean">
+        <property name="interfaceName" value="FlyService"/>
+        <property name="nodeGroup" ref="nodeList"/>
+        <property name="url" value="rpc://io.hujian.rpc.test.client.HelloService"/>
+        <property name="retries" value="1"/>
+        <property name="version" value="1.0.0"/>
+    </bean -->
+
+</beans>
