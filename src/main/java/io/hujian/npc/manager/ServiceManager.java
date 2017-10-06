@@ -90,7 +90,7 @@ public class ServiceManager {
         NPC_LOGGER.warn("[0][0][3] Start to set up the schedule executor to schedule service " +
                 "discover");
 
-        scheduledExecutorService.schedule(ServiceDiscover::new, 1, TimeUnit.SECONDS);
+        scheduledExecutorService.schedule(ServiceDiscover::new, 0, TimeUnit.SECONDS);
 
     }
 
@@ -459,6 +459,8 @@ public class ServiceManager {
 
         if (serviceEntryList == null || serviceEntryList.isEmpty()) {
             NPC_LOGGER.error("The Client for Service :" + service + " is null or empty now!");
+
+            return null;
         }
 
         NPC_LOGGER.warn("Load the loadBalance/ServiceMap for service:" + service + ":"

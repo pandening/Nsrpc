@@ -61,7 +61,15 @@ public class ObjectProxy<T> implements InvocationHandler, IAsyncObjectProxy  {
 
         LOGGER.error("Request:->" + method.getDeclaringClass().getName() + " : " + method.getName());
 
-        RpcClientHandler handler = ServiceManager.ServiceManagerHolder.SERVICE_MANAGER.robinChooseHandler();
+        //RpcClientHandler handler = ServiceManager.ServiceManagerHolder.SERVICE_MANAGER.robinChooseHandler();
+
+        RpcClientHandler handler = null;
+
+        while (handler == null) {
+            handler =
+                    ServiceManager.ServiceManagerHolder.SERVICE_MANAGER.getRpcClientHandler(request);
+        }
+
 
         RPCFuture rpcFuture = handler.sendRequest(request);
         return rpcFuture.get();
@@ -69,9 +77,16 @@ public class ObjectProxy<T> implements InvocationHandler, IAsyncObjectProxy  {
 
     @Override
     public RPCFuture call(String funcName, Object... args) {
-        RpcClientHandler handler = ServiceManager.ServiceManagerHolder.SERVICE_MANAGER.robinChooseHandler();
+        //RpcClientHandler handler = ServiceManager.ServiceManagerHolder.SERVICE_MANAGER.robinChooseHandler();
 
         RpcRequest request = createRequest(this.clazz.getName(), funcName, args);
+
+        RpcClientHandler handler = null;
+
+        while (handler == null) {
+            handler =
+                    ServiceManager.ServiceManagerHolder.SERVICE_MANAGER.getRpcClientHandler(request);
+        }
 
         return handler.sendRequest(request);
     }

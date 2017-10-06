@@ -10,14 +10,33 @@
     <context:annotation-config/>
     <context:component-scan base-package="io.hujian.*"/>
 
+    <bean id="serviceDiscovery" class="io.hujian.npc.discover.ServiceDiscover"/>
+
+    <bean id="rpcClient" class="io.hujian.npc.manager.RpcClient">
+        <constructor-arg name="discover" ref="serviceDiscovery"/>
+    </bean>
+
     <bean id="referenceBean" class="io.hujian.rpc.test.application.ReferenceBean">
         <property name="desc" value="create new class's instance bt Class"/>
         <property name="clazz" value="io.hujian.rpc.test.client.HelloService"/>
     </bean>
 
-    <bean id="helloService1" class="io.hujian.npc.consumer.RpcServiceReferenceBean"
+    <bean id="syncHelloService" class="io.hujian.npc.consumer.RpcServiceReferenceBean"
           init-method="init">
         <property name="clazz" value="io.hujian.rpc.test.client.HelloService"/>
+        <property name="callType" value="sync"/>
+    </bean>
+
+    <bean id="futureHelloService" class="io.hujian.npc.consumer.RpcServiceReferenceBean"
+          init-method="init">
+        <property name="clazz" value="io.hujian.rpc.test.client.HelloService"/>
+        <property name="callType" value="future"/>
+    </bean>
+
+    <bean id="callbackHelloService" class="io.hujian.npc.consumer.RpcServiceReferenceBean"
+          init-method="init">
+        <property name="clazz" value="io.hujian.rpc.test.client.HelloService"/>
+        <property name="callType" value="callback"/>
     </bean>
 
 </beans>
