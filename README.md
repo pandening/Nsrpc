@@ -77,7 +77,7 @@ public class EchoServiceImpl implements EchoService{
 需要注意的一点是，你需要在你的接口的实现类上加上@RpcService注解，让ok-rpc知道这是一个ok-rpc接口的实现类。至于
 具体的接口，你需要添加在注解的参数中。
 
-最后一步，当然是使用Spring的xml文件来主持bean了：
+最后一步，当然是使用Spring的xml文件来注册bean了：
 
 ```java
 
@@ -147,13 +147,26 @@ public class EchoServiceImpl implements EchoService{
 2. 客户端注册服务bean
 
 首先，你需要有一份服务端提供的接口类文件，比如，你想要访问上面注册的EchoService，那么你就需要有一个这样的接口类。然后
-你通过注册下面的bean来加载引用：
+你通过注册下面的bean来加载引用，ok-rpc支持同步和异步调用，下面是详细示例：
 
 ```java
 
-    <bean id="echoService" class="io.hujian.npc.consumer.RpcServiceReferenceBean"
+    <bean id="syncHelloService" class="io.hujian.npc.consumer.RpcServiceReferenceBean"
           init-method="init">
-        <property name="clazz" value="io.hujian.rpc.test.client.EchoService"/>
+        <property name="clazz" value="io.hujian.rpc.test.client.HelloService"/>
+        <property name="callType" value="sync"/>
+    </bean>
+
+    <bean id="futureHelloService" class="io.hujian.npc.consumer.RpcServiceReferenceBean"
+          init-method="init">
+        <property name="clazz" value="io.hujian.rpc.test.client.HelloService"/>
+        <property name="callType" value="future"/>
+    </bean>
+
+    <bean id="callbackHelloService" class="io.hujian.npc.consumer.RpcServiceReferenceBean"
+          init-method="init">
+        <property name="clazz" value="io.hujian.rpc.test.client.HelloService"/>
+        <property name="callType" value="callback"/>
     </bean>
 
 ```
@@ -163,9 +176,34 @@ public class EchoServiceImpl implements EchoService{
 ```java
 
         ApplicationContext context = new ClassPathXmlApplicationContext("client-services.xml");
-        EchoService echoService = (EchoService) context.getBean("echoService");
 
-        System.out.println("Response:" + echoService.echo("hello, ok-rpc!"));
+        HelloService helloService = (HelloService) context.getBean("syncHelloService");
+
+        System.out.println("Sync Call Result:" + helloService.hello("hello ok-rpc"));
+
+        IAsyncObjectProxy proxy = (IAsyncObjectProxy) context.getBean("futureHelloService");
+
+        RPCFuture future = proxy.call("hello", "hello ok-rpc");
+
+        try {
+            System.out.println("Future Call Type:" + future.get());
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        proxy = (IAsyncObjectProxy) context.getBean("callbackHelloService");
+
+        proxy.call("hello", "hello ok-rpc").addCallback(new AsyncRPCCallback() {
+            @Override
+            public void success(Object result) {
+                System.out.println("Callback Call Result:" + result);
+            }
+
+            @Override
+            public void fail(Exception e) {
+                System.out.println("Callback Call Result:" + e);
+            }
+        });
 
 ```
 
