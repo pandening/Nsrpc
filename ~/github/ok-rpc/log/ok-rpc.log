@@ -472,3 +472,244 @@ rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
 2017-10-06 10:26:28,499 [nioEventLoopGroup-4-4] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
 2017-10-06 10:26:28,499 [nioEventLoopGroup-4-5] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
 2017-10-06 10:26:28,499 [nioEventLoopGroup-4-5] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:25:59,145 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:rpcServiceReferenceBean at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:25:59,152 [main] WARN  [consumer.RpcServiceReferenceBean] Start to get zookeeper server address from configure..
+2017-10-06 13:26:04,260 [main] WARN  [consumer.RpcServiceReferenceBean] Success to connect to Zookeeper Server
+2017-10-06 13:26:04,265 [main] WARN  [consumer.RpcServiceReferenceBean] get node list:[]
+2017-10-06 13:26:04,266 [main] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:26:04,269 [main] WARN  [consumer.RpcServiceReferenceBean] [0][0][3] Start to set up the schedule executor to schedule service discover
+2017-10-06 13:26:04,387 [main] INFO  [consumer.RpcServiceReferenceBean] constructor of RpcServicePublishBean run.
+2017-10-06 13:26:04,389 [main] INFO  [consumer.RpcServiceReferenceBean] constructor of RpcServicePublishBean run.
+2017-10-06 13:26:04,397 [main] WARN  [consumer.RpcServiceReferenceBean] Success to get service publish beans.[2]
+2017-10-06 13:26:04,397 [main] WARN  [consumer.RpcServiceReferenceBean] Get the handler map and bootstrap, start to boot the rpc Server
+2017-10-06 13:26:04,406 [main] WARN  [consumer.RpcServiceReferenceBean] Create an node ok
+2017-10-06 13:26:04,406 [main] WARN  [consumer.RpcServiceReferenceBean] Success to create an EPHEMERAL node
+2017-10-06 13:26:04,406 [main] WARN  [consumer.RpcServiceReferenceBean] Success to register the service:ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1 to zookeeper Server
+2017-10-06 13:26:04,408 [main] WARN  [consumer.RpcServiceReferenceBean] Create an node ok
+2017-10-06 13:26:04,408 [main] WARN  [consumer.RpcServiceReferenceBean] Success to create an EPHEMERAL node
+2017-10-06 13:26:04,408 [main] WARN  [consumer.RpcServiceReferenceBean] Success to register the service:ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1 to zookeeper Server
+2017-10-06 13:26:04,408 [main] WARN  [consumer.RpcServiceReferenceBean] Try to start RpcServer on :127.0.0.1:18999 for service:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+
+2017-10-06 13:26:04,408 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:26:04,409 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:26:04,409 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:26:04,410 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:26:04,412 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1, ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:26:04,412 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:26:04,412 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:26:04,412 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:26:04,413 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+2017-10-06 13:26:05,274 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1, ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:26:05,275 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:26:05,276 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:26:05,276 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:26:05,276 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+2017-10-06 13:26:09,535 [main] WARN  [consumer.RpcServiceReferenceBean] RpcServer start on :127.0.0.1:18999 for service:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+
+2017-10-06 13:26:09,537 [nioEventLoopGroup-2-4] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:09,537 [nioEventLoopGroup-2-3] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:09,537 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:09,537 [nioEventLoopGroup-2-5] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:09,537 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:09,540 [nioEventLoopGroup-2-4] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,540 [nioEventLoopGroup-2-5] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,540 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,540 [nioEventLoopGroup-2-3] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,540 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,548 [nioEventLoopGroup-2-5] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:26:09,548 [nioEventLoopGroup-2-4] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:26:09,548 [nioEventLoopGroup-2-2] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:26:09,548 [nioEventLoopGroup-2-3] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:26:09,548 [nioEventLoopGroup-2-1] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:26:09,550 [nioEventLoopGroup-4-1] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,551 [nioEventLoopGroup-4-1] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:09,551 [nioEventLoopGroup-4-2] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,551 [nioEventLoopGroup-4-2] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:09,551 [nioEventLoopGroup-4-3] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,552 [nioEventLoopGroup-4-3] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:09,552 [nioEventLoopGroup-4-4] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,552 [nioEventLoopGroup-4-4] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:09,552 [nioEventLoopGroup-4-5] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:09,553 [nioEventLoopGroup-4-5] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:22,450 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:rpcServiceReferenceBean at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:26:22,461 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:helloService1 at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:26:22,502 [main] WARN  [consumer.RpcServiceReferenceBean] Success to init bean at: RpcServiceReferenceBean.init
+2017-10-06 13:26:22,530 [main] WARN  [consumer.RpcServiceReferenceBean] [0][0][3] Start to set up the schedule executor to schedule service discover
+2017-10-06 13:26:23,538 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to get zookeeper server address from configure..
+2017-10-06 13:26:28,595 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Success to connect to Zookeeper Server
+2017-10-06 13:26:28,603 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1, ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:26:28,603 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:26:28,605 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:26:28,606 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:26:28,607 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+2017-10-06 13:26:33,677 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:33,677 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:33,681 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:33,681 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:33,718 [nioEventLoopGroup-4-6] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:33,718 [nioEventLoopGroup-4-6] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:33,718 [nioEventLoopGroup-4-7] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:26:33,718 [nioEventLoopGroup-4-7] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:26:33,719 [nioEventLoopGroup-2-2] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:26:33,719 [nioEventLoopGroup-2-1] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:26:33,720 [main] WARN  [consumer.RpcServiceReferenceBean] RoundRobin Count:0
+2017-10-06 13:26:33,852 [pool-2-thread-1] WARN  [consumer.RpcServiceReferenceBean] Start to handler the request:io.hujian.npc.manager.RpcRequest@541860e0
+2017-10-06 13:26:33,853 [pool-2-thread-2] WARN  [consumer.RpcServiceReferenceBean] Start to handler the request:io.hujian.npc.manager.RpcRequest@28f26e8
+2017-10-06 13:26:33,905 [nioEventLoopGroup-4-7] WARN  [consumer.RpcServiceReferenceBean] Send response for request 358c64eb-543b-4f7b-92df-08f1a8f5bd04 Result:io.hujian.npc.manager.RpcResponse@1f4563a8
+2017-10-06 13:26:33,906 [nioEventLoopGroup-4-7] WARN  [consumer.RpcServiceReferenceBean] Send response for request 358c64eb-543b-4f7b-92df-08f1a8f5bd04 Result:io.hujian.npc.manager.RpcResponse@7046d51f
+2017-10-06 13:26:33,913 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Get Response from Rpc Server for request:358c64eb-543b-4f7b-92df-08f1a8f5bd04
+2017-10-06 13:26:33,913 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Rpc Call once time:io.hujian.npc.manager.RpcResponse@2bfcc8e0
+2017-10-06 13:26:33,914 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Get Response from Rpc Server for request:358c64eb-543b-4f7b-92df-08f1a8f5bd04
+2017-10-06 13:37:17,288 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:rpcServiceReferenceBean at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:37:17,295 [main] WARN  [consumer.RpcServiceReferenceBean] Start to get zookeeper server address from configure..
+2017-10-06 13:37:22,398 [main] WARN  [consumer.RpcServiceReferenceBean] Success to connect to Zookeeper Server
+2017-10-06 13:37:22,403 [main] WARN  [consumer.RpcServiceReferenceBean] get node list:[]
+2017-10-06 13:37:22,403 [main] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:37:22,406 [main] WARN  [consumer.RpcServiceReferenceBean] [0][0][3] Start to set up the schedule executor to schedule service discover
+2017-10-06 13:37:22,491 [main] INFO  [consumer.RpcServiceReferenceBean] constructor of RpcServicePublishBean run.
+2017-10-06 13:37:22,493 [main] INFO  [consumer.RpcServiceReferenceBean] constructor of RpcServicePublishBean run.
+2017-10-06 13:37:22,499 [main] WARN  [consumer.RpcServiceReferenceBean] Success to get service publish beans.[2]
+2017-10-06 13:37:22,499 [main] WARN  [consumer.RpcServiceReferenceBean] Get the handler map and bootstrap, start to boot the rpc Server
+2017-10-06 13:37:22,509 [main] WARN  [consumer.RpcServiceReferenceBean] Create an node ok
+2017-10-06 13:37:22,509 [main] WARN  [consumer.RpcServiceReferenceBean] Success to create an EPHEMERAL node
+2017-10-06 13:37:22,509 [main] WARN  [consumer.RpcServiceReferenceBean] Success to register the service:ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1 to zookeeper Server
+2017-10-06 13:37:22,511 [main] WARN  [consumer.RpcServiceReferenceBean] Create an node ok
+2017-10-06 13:37:22,511 [main] WARN  [consumer.RpcServiceReferenceBean] Success to create an EPHEMERAL node
+2017-10-06 13:37:22,511 [main] WARN  [consumer.RpcServiceReferenceBean] Success to register the service:ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1 to zookeeper Server
+2017-10-06 13:37:22,511 [main] WARN  [consumer.RpcServiceReferenceBean] Try to start RpcServer on :127.0.0.1:18999 for service:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+
+2017-10-06 13:37:22,511 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:37:22,511 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:37:22,512 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:37:22,513 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:37:22,515 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1, ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:37:22,515 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:37:22,515 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:37:22,516 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+2017-10-06 13:37:22,516 [main-EventThread] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:37:23,414 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1, ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:37:23,415 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:37:23,415 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:37:23,415 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:37:23,415 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+2017-10-06 13:37:27,595 [main] WARN  [consumer.RpcServiceReferenceBean] RpcServer start on :127.0.0.1:18999 for service:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+
+2017-10-06 13:37:27,597 [nioEventLoopGroup-2-3] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:27,597 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:27,597 [nioEventLoopGroup-2-5] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:27,597 [nioEventLoopGroup-2-4] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:27,597 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:27,600 [nioEventLoopGroup-2-3] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,600 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,600 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,600 [nioEventLoopGroup-2-4] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,600 [nioEventLoopGroup-2-5] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,605 [nioEventLoopGroup-2-1] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:37:27,605 [nioEventLoopGroup-2-2] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:37:27,605 [nioEventLoopGroup-2-5] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:37:27,605 [nioEventLoopGroup-2-3] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:37:27,605 [nioEventLoopGroup-2-4] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:37:27,608 [nioEventLoopGroup-4-1] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,609 [nioEventLoopGroup-4-1] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:27,609 [nioEventLoopGroup-4-2] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,609 [nioEventLoopGroup-4-2] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:27,609 [nioEventLoopGroup-4-3] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,610 [nioEventLoopGroup-4-3] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:27,609 [nioEventLoopGroup-4-4] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,610 [nioEventLoopGroup-4-4] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:27,610 [nioEventLoopGroup-4-5] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:37:27,610 [nioEventLoopGroup-4-5] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:37:39,795 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:rpcServiceReferenceBean at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:37:39,808 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:helloService1 at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:37:39,849 [main] WARN  [consumer.RpcServiceReferenceBean] Success to init bean at: RpcServiceReferenceBean.init
+2017-10-06 13:38:27,905 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:rpcServiceReferenceBean at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:38:27,918 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:helloService1 at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:38:27,960 [main] WARN  [consumer.RpcServiceReferenceBean] Success to init bean at: RpcServiceReferenceBean.init
+2017-10-06 13:38:27,988 [main] WARN  [consumer.RpcServiceReferenceBean] [0][0][3] Start to set up the schedule executor to schedule service discover
+2017-10-06 13:38:28,997 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to get zookeeper server address from configure..
+2017-10-06 13:38:34,052 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Success to connect to Zookeeper Server
+2017-10-06 13:38:34,060 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1, ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:38:34,060 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:38:34,061 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:38:34,063 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+2017-10-06 13:38:34,064 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:38:39,138 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:38:39,138 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:38:39,142 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:38:39,142 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:38:39,180 [nioEventLoopGroup-4-6] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:38:39,180 [nioEventLoopGroup-4-7] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:38:39,180 [nioEventLoopGroup-4-6] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:38:39,180 [nioEventLoopGroup-4-7] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:38:39,181 [nioEventLoopGroup-2-1] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:38:39,181 [nioEventLoopGroup-2-2] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:38:39,181 [main] WARN  [consumer.RpcServiceReferenceBean] RoundRobin Count:0
+2017-10-06 13:38:39,326 [pool-2-thread-1] WARN  [consumer.RpcServiceReferenceBean] Start to handler the request:io.hujian.npc.manager.RpcRequest@d51d2bd
+2017-10-06 13:38:39,327 [pool-2-thread-2] WARN  [consumer.RpcServiceReferenceBean] Start to handler the request:io.hujian.npc.manager.RpcRequest@6c87d5eb
+2017-10-06 13:38:39,378 [nioEventLoopGroup-4-7] WARN  [consumer.RpcServiceReferenceBean] Send response for request 4bfb30bf-e040-40c0-b4cb-6d0d81f98f28 Result:io.hujian.npc.manager.RpcResponse@74b38f9c
+2017-10-06 13:38:39,379 [nioEventLoopGroup-4-7] WARN  [consumer.RpcServiceReferenceBean] Send response for request 4bfb30bf-e040-40c0-b4cb-6d0d81f98f28 Result:io.hujian.npc.manager.RpcResponse@100b84b3
+2017-10-06 13:38:39,386 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Get Response from Rpc Server for request:4bfb30bf-e040-40c0-b4cb-6d0d81f98f28
+2017-10-06 13:38:39,386 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Rpc Call once time:io.hujian.npc.manager.RpcResponse@46ef9fea
+2017-10-06 13:38:39,386 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Get Response from Rpc Server for request:4bfb30bf-e040-40c0-b4cb-6d0d81f98f28
+2017-10-06 13:39:21,358 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:rpcServiceReferenceBean at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:39:21,374 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:helloService1 at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:39:21,436 [main] WARN  [consumer.RpcServiceReferenceBean] Success to init bean at: RpcServiceReferenceBean.init
+2017-10-06 13:39:21,482 [main] WARN  [consumer.RpcServiceReferenceBean] [0][0][3] Start to set up the schedule executor to schedule service discover
+2017-10-06 13:39:22,490 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to get zookeeper server address from configure..
+2017-10-06 13:39:24,638 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:rpcServiceReferenceBean at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:39:24,650 [main] WARN  [consumer.RpcServiceReferenceBean] Set up the Service bean:helloService1 at RpcServiceReferenceBean.setBeanName
+2017-10-06 13:39:24,693 [main] WARN  [consumer.RpcServiceReferenceBean] Success to init bean at: RpcServiceReferenceBean.init
+2017-10-06 13:39:24,722 [main] WARN  [consumer.RpcServiceReferenceBean] [0][0][3] Start to set up the schedule executor to schedule service discover
+2017-10-06 13:39:25,730 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to get zookeeper server address from configure..
+2017-10-06 13:39:27,548 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Success to connect to Zookeeper Server
+2017-10-06 13:39:27,556 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1, ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:39:27,556 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:39:27,557 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:39:27,559 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+2017-10-06 13:39:27,560 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:39:30,786 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Success to connect to Zookeeper Server
+2017-10-06 13:39:30,794 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] get node list:[ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.HelloService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1, ip=127.0.0.1#port=18999#sname=io.hujian.rpc.test.client.EchoService#sdesc=null#stag=null#sversion=1.0.0#loadBalance=roundRobin#weight=1]
+2017-10-06 13:39:30,794 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Update the Service....
+2017-10-06 13:39:30,795 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to check if there are new Service
+2017-10-06 13:39:30,797 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.EchoService_1.0.0
+2017-10-06 13:39:30,797 [serviceManagerThreadPool-1] WARN  [consumer.RpcServiceReferenceBean] Start to connect to ServiceEntry:rpc://127.0.0.1:18999/io.hujian.rpc.test.client.HelloService_1.0.0
+2017-10-06 13:39:32,640 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:39:32,640 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:39:32,643 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:39:32,643 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:39:32,681 [nioEventLoopGroup-4-9] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:39:32,681 [nioEventLoopGroup-4-8] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:39:32,682 [nioEventLoopGroup-4-9] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:39:32,682 [nioEventLoopGroup-4-8] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:39:32,682 [nioEventLoopGroup-2-2] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:39:32,682 [nioEventLoopGroup-2-1] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:39:32,683 [main] WARN  [consumer.RpcServiceReferenceBean] RoundRobin Count:0
+2017-10-06 13:39:32,744 [pool-2-thread-3] WARN  [consumer.RpcServiceReferenceBean] Start to handler the request:io.hujian.npc.manager.RpcRequest@601d1641
+2017-10-06 13:39:32,745 [nioEventLoopGroup-4-8] WARN  [consumer.RpcServiceReferenceBean] Send response for request 7e8bb632-4019-4b76-b348-a202563f9a11 Result:io.hujian.npc.manager.RpcResponse@64526941
+2017-10-06 13:39:32,745 [pool-2-thread-4] WARN  [consumer.RpcServiceReferenceBean] Start to handler the request:io.hujian.npc.manager.RpcRequest@45307b69
+2017-10-06 13:39:32,746 [nioEventLoopGroup-4-8] WARN  [consumer.RpcServiceReferenceBean] Send response for request 7e8bb632-4019-4b76-b348-a202563f9a11 Result:io.hujian.npc.manager.RpcResponse@243430d5
+2017-10-06 13:39:32,752 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Get Response from Rpc Server for request:7e8bb632-4019-4b76-b348-a202563f9a11
+2017-10-06 13:39:32,752 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Rpc Call once time:io.hujian.npc.manager.RpcResponse@27415c41
+2017-10-06 13:39:32,753 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Get Response from Rpc Server for request:7e8bb632-4019-4b76-b348-a202563f9a11
+2017-10-06 13:39:35,873 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:39:35,873 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:39:35,877 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:39:35,877 [nioEventLoopGroup-2-2] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:39:35,915 [nioEventLoopGroup-4-10] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:39:35,916 [nioEventLoopGroup-4-11] WARN  [consumer.RpcServiceReferenceBean] Using default Codec: Protostuff
+2017-10-06 13:39:35,916 [nioEventLoopGroup-4-10] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:39:35,916 [nioEventLoopGroup-4-11] WARN  [consumer.RpcServiceReferenceBean] Using Default EnCoder : Protostuff
+2017-10-06 13:39:35,917 [nioEventLoopGroup-2-1] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:39:35,917 [nioEventLoopGroup-2-2] INFO  [consumer.RpcServiceReferenceBean] Success to connect to remote server:/127.0.0.1:18999
+2017-10-06 13:39:35,918 [main] WARN  [consumer.RpcServiceReferenceBean] RoundRobin Count:0
+2017-10-06 13:39:35,977 [pool-2-thread-5] WARN  [consumer.RpcServiceReferenceBean] Start to handler the request:io.hujian.npc.manager.RpcRequest@5be9f71a
+2017-10-06 13:39:35,979 [nioEventLoopGroup-4-10] WARN  [consumer.RpcServiceReferenceBean] Send response for request 84fbbbba-e52b-479f-9107-55550fedd527 Result:io.hujian.npc.manager.RpcResponse@3bfa8b5a
+2017-10-06 13:39:35,979 [pool-2-thread-6] WARN  [consumer.RpcServiceReferenceBean] Start to handler the request:io.hujian.npc.manager.RpcRequest@43444f78
+2017-10-06 13:39:35,979 [nioEventLoopGroup-4-10] WARN  [consumer.RpcServiceReferenceBean] Send response for request 84fbbbba-e52b-479f-9107-55550fedd527 Result:io.hujian.npc.manager.RpcResponse@4f31a268
+2017-10-06 13:39:35,986 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Get Response from Rpc Server for request:84fbbbba-e52b-479f-9107-55550fedd527
+2017-10-06 13:39:35,986 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Rpc Call once time:io.hujian.npc.manager.RpcResponse@50f59f28
+2017-10-06 13:39:35,987 [nioEventLoopGroup-2-1] WARN  [consumer.RpcServiceReferenceBean] Get Response from Rpc Server for request:84fbbbba-e52b-479f-9107-55550fedd527

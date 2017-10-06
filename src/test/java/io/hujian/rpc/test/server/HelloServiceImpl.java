@@ -8,7 +8,7 @@ import io.hujian.rpc.test.client.HelloService;
 public class HelloServiceImpl implements HelloService {
     @Override
     public String hello(String msg) {
-        return "say hello o:" + msg;
+        return "say hello to:" + msg;
     }
 
 }

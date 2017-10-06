@@ -57,6 +57,9 @@ public class RpcClient {
     private static volatile ExecutorService rpcClientExecutorService =
             Executors.newCachedThreadPool(rpcClientThreadFactory);
 
+    public RpcClient() {
+
+    }
 
     public RpcClient(String serverAddress) {
         this.serverAddress = serverAddress;
