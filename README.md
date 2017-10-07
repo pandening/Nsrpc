@@ -242,7 +242,7 @@ public class EchoServiceImpl implements EchoService{
    8、服务降级
    9、配置内容迁移到配置文件中加载，而不是写死在代码中（也别使用Constant类了吧！）
    10、负载均衡合理、合法化（BugFix）
-   11、获取clientHandler为null时的轮询问题，希望可以做成首先将请求缓存起来，等可以获取到Client Handler的时候再尝试执行。或者
+   11、获取clientHandler为NULL时的轮询问题，希望可以做成首先将请求缓存起来，等可以获取到Client Handler的时候再尝试执行。或者
        调整架构，使得不会出现在请求到达之前client handler还没有就绪的情况 ！！！
 
 
